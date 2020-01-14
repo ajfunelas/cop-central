@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 (async () => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ executablePath: 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'})
   const page = await browser.newPage()
   
   const navigationPromise = page.waitForNavigation()
