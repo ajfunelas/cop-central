@@ -1,27 +1,27 @@
 const puppeteer = require('puppeteer');
 (async () => {
-  const browser = await puppeteer.launch({
-		ignoreHTTPSErrors: true,
-		headless: false
-	});
-  const page = await browser.newPage();
+  const browser = await puppeteer.launch({ignoreHTTPSErrors: true, headless: false})
+  const page = await browser.newPage()
   
-  const navigationPromise = page.waitForNavigation();
-
-  await page.goto('https://www.footlocker.com.au/en/p/puma-rs-x3-men-shoes-90882?v=244205324304#!searchCategory=men');
+  const navigationPromise = page.waitForNavigation()
   
-  await page.setViewport({ width: 1279, height: 618 });
+  await page.goto('https://www.nike.com/au/launch/?s=in-stock')
   
-  await page.waitForSelector('#fitanalytics_sizecontainer > .fl-accordion-tab--content:nth-child(6) > .fl-product-size > .fl-product-size--item:nth-child(5) > span');
-  await page.click('#fitanalytics_sizecontainer > .fl-accordion-tab--content:nth-child(6) > .fl-product-size > .fl-product-size--item:nth-child(5) > span');
+  await page.setViewport({ width: 1918, height: 977 })
   
-  await page.waitForSelector('.col-xs-12 > .row > .col-xs-12 > .fl-btn > .fl-btn--inner');
-  await page.click('.col-xs-12 > .row > .col-xs-12 > .fl-btn > .fl-btn--inner');
+  await page.waitForSelector('.pb2-sm:nth-child(4) > .product-card > .ncss-col-sm-12 > .card-link > .image-component')
+  await page.click('.pb2-sm:nth-child(4) > .product-card > .ncss-col-sm-12 > .card-link > .image-component')
   
-  await page.waitForSelector('.fl-minicart--productlist > .fl-minicart--checkout > .fl-minicart--checkout__checkout > .fl-btn > .fl-btn--inner');
-  await page.click('.fl-minicart--productlist > .fl-minicart--checkout > .fl-minicart--checkout__checkout > .fl-btn > .fl-btn--inner');
+  await page.waitForSelector('.ncss-col-sm-12 > .buying-tools-container > .size-layout > .size:nth-child(5) > .size-grid-dropdown')
+  await page.click('.ncss-col-sm-12 > .buying-tools-container > .size-layout > .size:nth-child(5) > .size-grid-dropdown')
   
-  // await navigationPromise
+  await page.waitForSelector('.ncss-col-sm-12 > .ncss-col-sm-12 > .buying-tools-container > .mt2-sm > .ncss-brand')
+  await page.click('.ncss-col-sm-12 > .ncss-col-sm-12 > .buying-tools-container > .mt2-sm > .ncss-brand')
   
-  await browser.close();
+  await page.waitForSelector('.d-md-t > .d-md-tc > .cart-item-modal-content-container > .ncss-row > .ncss-btn-black')
+  await page.click('.d-md-t > .d-md-tc > .cart-item-modal-content-container > .ncss-row > .ncss-btn-black')
+  
+  await navigationPromise
+  
+  // await browser.close()
 })()
