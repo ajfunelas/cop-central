@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+
+// const info = require("./configs")
+
 (async () => {
   const browser = await puppeteer.launch({ignoreHTTPSErrors: true, headless: false})
   const page = await browser.newPage()
