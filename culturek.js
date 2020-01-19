@@ -1,5 +1,28 @@
 const puppeteer = require('puppeteer');
+
+// function chill() {
+//   console.log("initiating wait")
+//   // sleep(4000);
+//   page.waitFor(4000)
+//   console.log("waiting has finished")
+// }
+
+// function chill(timeout) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, timeout);
+//   });
+// }
+
+// (async () => {
+//   console.log('start');
+//   console.time('delay');
+//   sleep(3000);
+//   console.timeEnd('delay');
+// })();
+
+
 (async () => {
+
   const browser = await puppeteer.launch({ignoredHTTPSErrors: true, headless: false})
   const page = await browser.newPage()
   
@@ -17,6 +40,8 @@ const puppeteer = require('puppeteer');
   
   await page.waitFor(4000);
 
+  // chill();
+
 // await delay(4000)
 
   await page.waitForSelector('#shopify-section-header > #CartDrawer > #CartContainer > .ajaxcart__footer > .btn--primary')
@@ -30,7 +55,7 @@ const puppeteer = require('puppeteer');
   await page.waitForSelector('.section__content #checkout_email')
   await page.click('.section__content #checkout_email')
   
-  await page.type('.section__content #checkout_email', 'aj_funelas@yahoo.com')
+  await page.type('.section__content #checkout_email', 'test_email@yahoo.com')
   
 //   await page.type('.section__content #checkout_email', 'aj_funelas@yahoo.com')
   
