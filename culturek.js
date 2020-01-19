@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 (async () => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ignoredHTTPSErrors: true, headless: false})
   const page = await browser.newPage()
   
   const navigationPromise = page.waitForNavigation()
