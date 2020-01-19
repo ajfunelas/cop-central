@@ -15,6 +15,10 @@ const puppeteer = require('puppeteer');
   await page.waitForSelector('.form-horizontal > .add-to-cart-button > .btn > .button-content > .btn__content')
   await page.click('.form-horizontal > .add-to-cart-button > .btn > .button-content > .btn__content')
   
+  await page.waitFor(4000);
+
+// await delay(4000)
+
   await page.waitForSelector('#shopify-section-header > #CartDrawer > #CartContainer > .ajaxcart__footer > .btn--primary')
   await page.click('#shopify-section-header > #CartDrawer > #CartContainer > .ajaxcart__footer > .btn--primary')
   
@@ -28,7 +32,7 @@ const puppeteer = require('puppeteer');
   
   await page.type('.section__content #checkout_email', 'aj_funelas@yahoo.com')
   
-  await page.type('.section__content #checkout_email', 'aj_funelas@yahoo.com')
+//   await page.type('.section__content #checkout_email', 'aj_funelas@yahoo.com')
   
   await page.type('.fieldset-description #checkout_buyer_accepts_marketing', '1')
   
@@ -45,5 +49,5 @@ const puppeteer = require('puppeteer');
   await page.waitForSelector('.section__content #checkout_shipping_address_phone')
   await page.click('.section__content #checkout_shipping_address_phone')
   
-  await browser.close()
+//   await browser.close()
 })()
