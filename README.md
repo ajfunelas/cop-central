@@ -2,4 +2,4 @@
 My Personal Sneaker Bot :)
 
 
-working for - culture kings, footlocker, snkrs and addidas
+Working for - culture kings, footlocker, snkrs and addidas
