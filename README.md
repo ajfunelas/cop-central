@@ -12,3 +12,8 @@ Features to add:
 - Telegram Notification
 - Discord Notification
 
+
+Idea:
+
+- vs c#
+
