@@ -9,4 +9,6 @@ Features to add:
 
 - Sneaker Monitoring on Websites
 - Release Calendar
+- Telegram Notification
+- Discord Notification
 
