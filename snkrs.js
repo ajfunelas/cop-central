@@ -12,12 +12,9 @@ const puppeteer = require('puppeteer');
 
 
   try {
-    await page.goto('https://www.nike.com/au/launch/?s=in-stock')
+    await page.goto('https://www.nike.com/au/launch/t/air-jordan-1-high-black-gym-red/')
   
-    await page.setViewport({ width: 1918, height: 977 })
-  
-    await page.waitForSelector('.pb2-sm:nth-child(4) > .product-card > .ncss-col-sm-12 > .card-link > .image-component')
-    await page.click('.pb2-sm:nth-child(4) > .product-card > .ncss-col-sm-12 > .card-link > .image-component')
+    await page.setViewport({ width: 1920, height: 1007 })
   
     await page.waitForSelector('.ncss-col-sm-12 > .buying-tools-container > .size-layout > .size:nth-child(5) > .size-grid-dropdown')
     await page.click('.ncss-col-sm-12 > .buying-tools-container > .size-layout > .size:nth-child(5) > .size-grid-dropdown')
@@ -32,7 +29,7 @@ const puppeteer = require('puppeteer');
   } 
 
   catch(err) {
-    console.log("error" + err)
+    console.log("Current error: " + err)
   }
   
 
