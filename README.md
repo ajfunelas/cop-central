@@ -8,7 +8,7 @@ Working for - culture kings, footlocker, snkrs and addidas
 Features to add:
 
 - Sneaker Monitoring on Websites
-- Release Calendar (Footlocker)
+- Release Calendar (Footlocker & SNKRS)
 - Telegram Notification
 - Discord Notification
 
