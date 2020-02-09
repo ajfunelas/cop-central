@@ -20,3 +20,5 @@ Idea:
 
 Set milestones
 
+Sneaker monitoring
+
